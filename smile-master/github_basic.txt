@@ -1,0 +1,6 @@
+1. Download GIT (not GITHUB) from: http://git-scm.com/downloads
+
+2. Install GIT. 
+
+From this step on, use a terminal (if you're using Linux/MacOS) or Git Bash (installed along with the windows version) for the commands.
+Referred here for further information: https://help.github.com/articles/set-up-git
