@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Professor - Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="styles/professor.css">
+	<link href="https://fonts.googleapis.com/css?family=Butcherman|Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+			
+	<script type="text/javascript" src="scripts/professor.js"></script>
+	<script type="text/javascript">
+	 // This is a jQuery convention to say that once all the files
+	 // load, the function openTab.start() should run.
+	 // This function is defined in the professor.js
+		$(function () {
+		   opentTab().start();
+		});
+	</script>
+</head>
+
+<body>
+	<header style="background-color: white; color:white; top:0; font-family:Arial; font-size:150%;">
+		<div class = "header_row">
+			<div class = "wsu_name">
+				<img src = "images/wsu_name_logo.png" style = "width:700px; height:130px;">
+			</div>
+		</div>
+	</header>
+
+	<div class="mytab">
+		<div class ="tab" role ="tabpanel">
+			<div class="nav nav-tabs" role="tablist">
+				<!-- <li class = "tab1 active"><a href="#course" role = "tab" data-toggle="tab"> My Course
+				</a></li>
+				<li class = "tab2"><a href="#preference" role = "tab" data-toggle="tab"> Course Preference
+				</a></li>
+				<li class = "tab3"><a href="#applicant" role = "tab" data-toggle="tab"> Edit Application
+				</a></li> -->
+				<button class="tablink" onclick="openTab(event, 'course')" id="defaultOpen"> My Course </button>
+				<button class="tablink" onclick="openTab(event, 'preference')"> Course Preference </button>
+				<button class="tablink" onclick="openTab(event, 'application')"> Edit Application </button>
+
+			</div>
+		</div>	
+	</div>	
+	<div id="defaultOpen">
+			<div id="course" class="tabcontent">
+					<section class="courses_info">
+						<h2>Course Taking</h2>
+					</section>
+				</div>
+
+	</div>
+			
+
+			<div id="preference" class="tabcontent">
+				<form id = "preference_form" method = "POST">
+					<h2>Add Courses</h2>
+					<div class="course_taking">
+						<label class ="labels">Course Taking:</label>
+						<select class = "course_taking_input">
+							<option value = "0" >-select-</option>
+							<option value = "Cpts 121" >Cpts 121</option>
+							<option value = "Cpts 122" >Cpts 122</option>
+							<option value = "Cpts 223" >Cpts 223</option>
+							<option value = "Cpts 260" >Cpts 260</option>
+							<option value = "Cpts 360" >Cpts 360</option>
+						</select>
+					</div>
+
+					<div class="lab_section">
+						<label class ="labels">Lab Section:</label>
+						<select class ="lab_section_input">
+							<option value = "0" >-select-</option>
+							<option value = "1">Lab section 1 (TUTH 4pm - 7pm)</option>
+							<option value = "2">Lab section 2 (TUTH 1pm - 4pm)</option>
+							<option value = "3">Lab section 3 (WF 7am - 10am)</option>
+							<option value = "4">Lab section 4 (MW 1pm - 4pm)</option>
+							<option value = "5">Lab section 5 (MW 4pm - 7pm)</option>
+						</select>
+					</div>
+					<input type="submit" class="submit_form_input btn btn-primary btn" value="Create Course">
+				</form>
+			</div>
+
+			<div id="application" class="tabcontent">
+				<h2>Application</h2>
+			</div>
+
+		
+	
+
+
+
+</body>
+</html>

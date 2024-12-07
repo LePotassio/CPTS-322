@@ -1,0 +1,133 @@
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+header {
+    z-index: 2;
+    text-align:center;
+    position: fixed;
+}
+.header_row{
+    text-align: center;
+    position: fixed;
+}
+.mytab{
+  width: 100%;
+}
+
+.tablink{
+  display: block;
+  padding: 15px;
+  background: #ffffff;
+  color: #d39102;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid  #ffebc8;
+  border-bottom: none;
+  margin-right: 0;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+	font-size: 130%;
+}
+
+/*Tab styling*/
+a:hover,a:focus{
+    outline: none;
+    text-decoration: none;
+}
+.tab .nav-tabs{
+    background-color: white;
+}
+.tab .nav-tabs{
+	position: fixed;
+	top: 135px;
+    border-bottom: none;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+}
+.tab .nav-tabs li{
+    margin: 0;
+}
+.tab .nav-tabs li a{
+    display: block;
+    padding: 15px ;
+    background: #ffffff;
+    color: #d39102;
+    text-transform: uppercase;
+    text-align: center;
+	border: 1px solid  #ffebc8;
+	border-bottom: none;
+    margin-right: 0;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+
+}
+
+.tab .nav-tabs li a:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #e9e9e9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    perspective-origin: 50% 100%;
+    transform: perspective(900px) rotate3d(1, 0, 0, 90deg);
+    transform-origin: 50% 100% 0;
+    transition: transform 0.4s ease 0s, background-color 0.4s ease 0s;
+}
+.tab .nav-tabs li.active a:after{
+    background: #eee6d2;
+    transform: perspective(900px) rotate3d(1, 0, 0, 0deg);
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li a:hover{
+	color: #4b489b;
+	font-weight: bold;
+    border: none;
+}
+
+.mytab {
+	margin-top: 135px;
+	margin-left: 15px;
+	width: 98%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 130%;
+
+}
+
+
+
+.tabcontent{
+	position: relative;
+	margin-top: 70px;
+	background: white;
+    color: #000000;
+    line-height: 26px;
+    padding-top: 10px;
+    top: 135px;
+    
+}
+.course_info{
+    position: center;
+}
+form#preference_form{
+    display: block;
+    border-color: black;
+	background-color :white;
+	padding: 1% 15% 85px 15%;
+}
+
+.submit_form_input {
+	float: left;
+	width: 170px;
+	font-weight: bold;
+	margin: 20px 0px 20px 0px;
+}
